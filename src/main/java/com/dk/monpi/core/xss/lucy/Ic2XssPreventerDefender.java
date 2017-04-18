@@ -4,12 +4,12 @@ import com.navercorp.lucy.security.xss.servletfilter.defender.Defender;
 import com.nhncorp.lucy.security.xss.XssPreventer;
 
 /**
- * 인포채터2 용 XssPreventerDefender
+ * XssPreventerDefender
  * <p>
- * 인포채터는 ">" 를 구분자로 사용하는데, ">" 는 XssPreventer.escape 처리대상
+ * ">" 를 구분자로 사용하는 경우, ">" 는 XssPreventer.escape 처리대상
  * 따라서 escape 처리 후에 다시한번 역치환하도록 처리함
  *
- * @author yongseoklee
+ * @author dk
  */
 public class Ic2XssPreventerDefender implements Defender {
 

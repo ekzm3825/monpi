@@ -15,7 +15,7 @@ import java.util.Map;
  * 사용자에게 에러메시지 뿐만 아니라, Alert 이 필요한경우
  * {@link #alertType} 를 활용하여 할 수있다.
  *
- * @author yongseoklee
+ * @author dk
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

@@ -10,7 +10,7 @@ import kr.qusi.spring.security.AbstractLoginManager;
  * 로그인 여부, 사용자 정보 관리
  *
  * @since 1.0.0
- * @author yongseoklee
+ * @author dk
  */
 public class LoginManager extends AbstractLoginManager {
 

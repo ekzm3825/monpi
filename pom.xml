@@ -4,7 +4,7 @@
   <groupId>com.dk.monpi</groupId>
   <artifactId>monpi</artifactId>
   <packaging>war</packaging>
-  <version>2.4.1.0-SNAPSHOT</version>
+  <version>0.0.0.1</version>
 
   <scm>
     <connection>scm:git:https://github.com/ekzm3825/monpi.git</connection>

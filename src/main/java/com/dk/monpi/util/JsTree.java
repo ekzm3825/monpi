@@ -13,7 +13,7 @@ import java.util.*;
  * DISA/INFOCHATTER 에서 값은 구분자(예. >) 기준으로 계층형 구조를 가짐
  * 계층형 구조를 JsTree Node 로 쉽게 만들 수 있도록, {@link JsTree.Node} 와 {@link JsTree.Mapper} 제공
  *
- * @author yongseoklee
+ * @author dk
  */
 public class JsTree {
 
@@ -24,7 +24,7 @@ public class JsTree {
     /**
      * JsTree Node
      *
-     * @author yongseoklee
+     * @author dk
      * @see <a href="https://www.jstree.com/docs/json">JSON data</a>
      */
     @Data

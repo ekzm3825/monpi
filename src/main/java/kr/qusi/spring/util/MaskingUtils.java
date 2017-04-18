@@ -3,7 +3,7 @@ package kr.qusi.spring.util;
 /**
  * 문자열 마스킹 유틸리티
  *
- * @author yongseoklee
+ * @author dk
  * @since 0.5.0
  */
 public abstract class MaskingUtils {

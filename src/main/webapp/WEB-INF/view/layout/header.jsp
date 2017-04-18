@@ -11,7 +11,7 @@
 <!-- header start -->
 <div class="header">
 	<div class="head_top clear">
-		<h1><a href="<%=Constants.CONTEXT%>/main.do"><img src="<%=Constants.CONTEXT%>/resources/images/common/logo.png" alt="Infochatter2 관리도구" class="top_logo" /></a></h1>
+		<h1><a href="<%=Constants.CONTEXT%>/main.do"><img src="<%=Constants.CONTEXT%>/resources/images/common/logo.png" alt="몬피 관리도구" class="top_logo" /></a></h1>
 		<ul class="util_menu">
 		<li><a href="#" class="util_help" onclick="ic.popup.open('<%=Constants.CONTEXT%>/resources/files/infochatter2_manual_v2.4.0.5.pdf', 'manual', 640, 800)">도움말</a></li>
 		<li><a href="#" class="util_user"><strong>${loginManager.member.name} (${loginManager.loginId})</strong></a></li>

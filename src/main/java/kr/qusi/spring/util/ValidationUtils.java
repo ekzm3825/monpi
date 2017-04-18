@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * 검증 유틸리티 클래스
  *
  * @since 1.0.0
- * @author yongseoklee
+ * @author dk
  */
 @Slf4j
 public abstract class ValidationUtils {

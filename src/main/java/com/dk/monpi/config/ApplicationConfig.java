@@ -1,7 +1,5 @@
 package com.dk.monpi.config;
 
-/*import com.diquest.infochatter2.client.Infochatter2Client;
-import com.diquest.infochatter2.module.common.service.IdGenServiceImpl;*/
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

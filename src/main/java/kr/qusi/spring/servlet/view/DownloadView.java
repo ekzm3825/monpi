@@ -20,7 +20,7 @@ import java.util.Map;
  * 다운로드 View
  *
  * @since 0.0.1
- * @author yongseoklee
+ * @author dk
  */
 @Slf4j
 public class DownloadView extends AbstractView {

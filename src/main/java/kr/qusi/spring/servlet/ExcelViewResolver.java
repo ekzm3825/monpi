@@ -7,7 +7,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
  * Excel ViewResolver
  *
  * @since 0.0.1
- * @author yongseoklee
+ * @author dk
  */
 public class ExcelViewResolver extends UrlBasedViewResolver {
 

@@ -17,7 +17,7 @@ import java.util.Set;
  * 변경전: Map<String, Object> getParameterMap();
  * 변경후: Map<String, String[]> getParameterMap();
  *
- * @author yongseoklee
+ * @author dk
  * @see com.navercorp.lucy.security.xss.servletfilter.XssEscapeServletFilterWrapper
  */
 public class XssEscapeServletFilterWrapper extends HttpServletRequestWrapper {

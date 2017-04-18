@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * 네이버 루시 서블릿 필터에서 ContextPath 대응되지 않아 수정
  *
- * @author yongseoklee
+ * @author dk
  * @see com.navercorp.lucy.security.xss.servletfilter.XssEscapeServletFilter
  */
 public class XssEscapeServletFilter implements Filter {

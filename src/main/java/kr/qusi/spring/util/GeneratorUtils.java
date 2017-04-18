@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 문자열 무작위 생성
  *
- * @author yongseoklee
+ * @author dk
  */
 public abstract class GeneratorUtils {
 

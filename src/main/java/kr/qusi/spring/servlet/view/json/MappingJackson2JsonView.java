@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * JSON View
  *
  * @since 0.0.1
- * @author yongseoklee
+ * @author dk
  */
 @Slf4j
 public class MappingJackson2JsonView extends org.springframework.web.servlet.view.json.MappingJackson2JsonView {

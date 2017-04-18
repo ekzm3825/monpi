@@ -19,7 +19,7 @@ import java.util.Locale;
  * 만약 메시지 프로터티에 값이 없는경우 입력된 문자를 그대로 출력한다.
  * 단, BaseException 은 Spring Application 에서 작동한다.
  *
- * @author yongseoklee
+ * @author dk
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

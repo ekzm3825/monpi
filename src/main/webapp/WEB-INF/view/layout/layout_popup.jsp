@@ -5,7 +5,7 @@
 <head>
 	<%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<title>인포채터2 관리도구</title>
+	<title>몬피 관리도구</title>
 
 	<link rel="stylesheet" type="text/css" href="<%=Constants.CONTEXT%>/resources/lib/jstree-3.3.1/themes/default/style.min.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=Constants.CONTEXT%>/resources/lib/flatpickr-2.3.4/dist/flatpickr.min.css"/>

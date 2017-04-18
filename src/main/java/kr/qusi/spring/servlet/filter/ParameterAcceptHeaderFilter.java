@@ -19,7 +19,7 @@ import java.util.*;
  * 마치 {@link org.springframework.web.servlet.view.ContentNegotiatingViewResolver}의 favorParameter 또는
  * {@link org.springframework.web.filter.HiddenHttpMethodFilter} 비슷하게 작동한다.
  *
- * @author yongseoklee
+ * @author dk
  * @see <a href="http://stackoverflow.com/questions/1670329/ie-accept-headers-changing-why">http://stackoverflow.com/questions/1670329/ie-accept-headers-changing-why</a>
  */
 public class ParameterAcceptHeaderFilter extends OncePerRequestFilter {

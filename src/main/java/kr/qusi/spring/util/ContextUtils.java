@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
  * ServletContext, ApplicationContext 또는 Bean 을 취득하는 역활을 한다.
  * 단, {@link ContextUtils} 은 스프링프레임워크 생명주기에서 작동하며 그 외는 Null 을 반환한다.
  *
- * @author yongseoklee
+ * @author dk
  */
 public abstract class ContextUtils {
 

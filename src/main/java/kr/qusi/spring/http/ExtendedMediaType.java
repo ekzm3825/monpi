@@ -4,7 +4,7 @@ package kr.qusi.spring.http;
  * 스프링 {@link org.springframework.http.MediaType} 에서 정의되지 않는 타입을
  * 추가로 정의함
  *
- * @author yongseoklee
+ * @author dk
  */
 
 import org.springframework.http.MediaType;

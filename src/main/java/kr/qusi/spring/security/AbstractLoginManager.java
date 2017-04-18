@@ -13,7 +13,7 @@ import java.util.Collection;
  * 로그인 매니저
  *
  * @since 1.0.0
- * @author yongseoklee
+ * @author dk
  */
 public abstract class AbstractLoginManager {
 

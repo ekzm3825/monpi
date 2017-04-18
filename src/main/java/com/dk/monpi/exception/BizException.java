@@ -7,7 +7,7 @@ package com.dk.monpi.exception;
  * Presentation Layer (Controller) 에서 에러 핸들링이 필요 한 경우,
  * {@link SiteException} 으로 다시 감싸거나 소화한다.
  *
- * @author yongseoklee
+ * @author dk
  */
 public class BizException extends BaseException {
 

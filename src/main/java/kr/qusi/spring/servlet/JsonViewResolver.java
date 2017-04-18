@@ -8,7 +8,7 @@ import java.util.Locale;
 
 /**
  * @since 0.0.1
- * @author yongseoklee
+ * @author dk
  */
 public class JsonViewResolver implements ViewResolver {
 
