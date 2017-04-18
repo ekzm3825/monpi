@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="layout_popup" template="/WEB-INF/view/layout/layout_popup.jsp">
+    </definition>
+
+    <definition name="layout_main" template="/WEB-INF/view/layout/layout_main.jsp">
+        <put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/view/layout/header.jsp"/>
+    </definition>
+
+    <definition name="layout_blank" template="/WEB-INF/view/layout/layout_blank.jsp">
+    </definition>
+
+    <!-- ui -->
+    <definition name="ui" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/ui.jsp"/>
+    </definition>
+
+    <!-- login -->
+    <definition name="login/*" extends="layout_blank">
+        <put-attribute name="content" value="/WEB-INF/view/login/login.jsp"/>
+    </definition>
+
+    <!-- common/error -->
+    <definition name="common/error/*" extends="layout_blank">
+        <put-attribute name="content" value="/WEB-INF/view/common/error/{1}.jsp"/>
+    </definition>
+
+    <!-- group -->
+	<definition name="group/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/group/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <!-- chat -->
+	<definition name="chat/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/chat/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="chat/*/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/chat/{1}/{2}.jsp"/>
+    </definition>
+
+    <!-- corpus -->
+    <definition name="corpus/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/corpus/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="corpus/qna/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/corpus/qna/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="corpus/*/*/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/corpus/{1}/{2}/{3}.jsp"/>
+    </definition>
+
+
+    <!-- dictionary -->
+    <definition name="dictionary/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/dictionary/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="dictionary/*/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/dictionary/{1}/{2}.jsp"/>
+    </definition>
+
+    <!-- dialog -->
+    <definition name="dialog/model/graph" extends="layout_blank">
+        <put-attribute name="content" value="/WEB-INF/view/dialog/model/graph.jsp"/>
+    </definition>
+
+    <definition name="dialog/*/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/dialog/{1}/{2}/{3}_popup.jsp"/>
+    </definition>
+
+    <definition name="dialog/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/dialog/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="dialog/*/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/dialog/{1}/{2}.jsp"/>
+    </definition>
+
+    <!-- simulator -->
+    <definition name="simulator/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/simulator/{1}.jsp"/>
+    </definition>
+
+    <definition name="simulator/model-analyze" extends="layout_blank">
+        <put-attribute name="content" value="/WEB-INF/view/simulator/model-analyze.jsp"/>
+    </definition>
+    
+    <definition name="simulator/*/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/simulator/{1}/{2}_popup.jsp"/>
+    </definition>
+
+    <definition name="simulator/chatbot" extends="layout_blank">
+        <put-attribute name="content" value="/WEB-INF/view/simulator/chatbot.jsp"/>
+    </definition>
+
+    <!-- test -->
+    <definition name="test/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/test/{1}.jsp"/>
+    </definition>
+
+    <definition name="test/*/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/test/{1}/{2}.jsp"/>
+    </definition>
+
+    <!-- member-->
+    <definition name="member/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/member/{1}_popup.jsp"/>
+    </definition>
+
+    <definition name="member/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/member/{1}.jsp"/>
+    </definition>
+
+    <!-- dunit -->
+    <definition name="dunit/item/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/dunit/item/{1}_popup.jsp"/>
+    </definition>
+
+    <definition name="dunit/item/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/dunit/item/{1}.jsp"/>
+    </definition>
+
+    <definition name="dunit/*_popup" extends="layout_popup">
+        <put-attribute name="content" value="/WEB-INF/view/dunit/{1}_popup.jsp"/>
+    </definition>
+
+    <definition name="dunit/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/dunit/{1}.jsp"/>
+    </definition>
+
+    <!-- system -->
+    <definition name="system/*" extends="layout_main">
+        <put-attribute name="content" value="/WEB-INF/view/system/{1}.jsp"/>
+    </definition>
+
+</tiles-definitions>

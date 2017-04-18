@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.tiles:tiles-servlet:3.0.7">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/~/Documents/projects/2017/maven3/repository/org/apache/tiles/tiles-servlet/3.0.7/tiles-servlet-3.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/~/Documents/projects/2017/maven3/repository/org/apache/tiles/tiles-servlet/3.0.7/tiles-servlet-3.0.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/~/Documents/projects/2017/maven3/repository/org/apache/tiles/tiles-servlet/3.0.7/tiles-servlet-3.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
