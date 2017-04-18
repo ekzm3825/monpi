@@ -1,6 +1,6 @@
 package com.dk.monpi.exception;
 
-import com.diquest.infochatter2.config.ApplicationContextProvider;
+import com.dk.monpi.config.ApplicationContextProvider;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
