@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <!--
+  ##########################################
+  context-param
+  ##########################################
+  -->
+  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+  </context-param>
+
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>com.dk.monpi.config.ApplicationConfig</param-value>
+  </context-param>
+
+
+  <context-param>
+    <param-name>logbackConfigLocation</param-name>
+    <param-value>classpath:config/logback.xml</param-value>
+  </context-param>
+
+  <!--
+  ##########################################
+  listener
+  ##########################################
+  -->
+  <listener>
+    <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
+  </listener>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <listener>
+    <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+  </listener>
+
+  <!--
+  ##########################################
+  filter
+  ##########################################
+  -->
+  <!-- Encoding (Force: UTF-8) -->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <!-- HttpMethod Support -->
+  <filter>
+    <filter-name>httpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>httpMethodFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <!-- XSS -->
+  <!--
+  <filter>
+      <filter-name>xssEscapeServletFilter</filter-name>
+      <filter-class>kr.qusi.spring.servlet.filter.xss.XssEscapeServletFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+      <filter-name>xssEscapeServletFilter</filter-name>
+      <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  -->
+
+  <!--
+  ##########################################
+  servlet
+  ##########################################
+  -->
+  <!-- appServlet -->
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextClass</param-name>
+      <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </init-param>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.dk.monpi.config.WebMvcConfig</param-value>
+    </init-param>
+    <init-param>
+      <param-name>throwExceptionIfNoHandlerFound</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+  <!--
+  ##########################################
+  session
+  ##########################################
+  -->
+  <session-config>
+    <session-timeout>180</session-timeout>
+  </session-config>
+
+  <!--
+  ##########################################
+  welcome & error-page
+  ##########################################
+  -->
+  <welcome-file-list>
+    <welcome-file>main.do</welcome-file>
+  </welcome-file-list>
+
+  <!--
+  ##########################################
+  mime-mapping
+  ##########################################
+  -->
+  <mime-mapping>
+    <extension>ttf</extension>
+    <mime-type>font/truetype</mime-type>
+  </mime-mapping>
+
+  <mime-mapping>
+    <extension>otf</extension>
+    <mime-type>font/opentype</mime-type>
+  </mime-mapping>
+
+  <mime-mapping>
+    <extension>eot</extension>
+    <mime-type>application/vnd.ms-fontobject</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>woff</extension>
+    <mime-type>application/x-font-woff</mime-type>
+  </mime-mapping>
+
+</web-app>

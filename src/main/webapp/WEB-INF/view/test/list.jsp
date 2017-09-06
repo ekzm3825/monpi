@@ -4,16 +4,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fnc"%>
-<%@ page import="com.dk.monpi.constant.Constants"%>
-<%--<script src="<%=Constants.CONTEXT%>/resources/js/page/chat/basic/list.js"></script>--%>
+<%@ page import="com.diquest.openmedia.constant.Constants"%>
+<%--<script src="<%=Constants.CONTEXT%>/resources/js/page/main/list.js"></script>--%>
+<%--
 
-<%--<meta charset="utf-8">
+<meta charset="utf-8">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="author" content="">--%>
-
-<title>Coffee Bingo - Bootstrap Template</title>
+<meta name="author" content="">
+--%>
+<title>Monster Pizza</title>
+<script src="<%=Constants.CONTEXT%>/resources/js/common/ic.js"></script>
+<script src="<%=Constants.CONTEXT%>/resources/js/common/ajax-global.js"></script>
 
 <!-- Bootstrap -->
 <link href="<%=Constants.CONTEXT%>/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +29,7 @@
 <!-- Template CSS Files  -->
 <link href="<%=Constants.CONTEXT%>/resources/css/magnific-popup.css" rel="stylesheet">
 <link href="<%=Constants.CONTEXT%>/resources/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-<link href="<%=Constants.CONTEXT%>/resources/css/font-awesome.min.css" rel="stylesheet">
+<link href="<%=Constants.CONTEXT%>/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="<%=Constants.CONTEXT%>/resources/css/style.css" rel="stylesheet">
 <link href="<%=Constants.CONTEXT%>/resources/css/responsive.css" rel="stylesheet">
 
@@ -35,42 +39,20 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+<%--
 
 <!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%=Constants.CONTEXT%>/resources/css/images/fav-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%=Constants.CONTEXT%>/resources/css/images/fav-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%=Constants.CONTEXT%>/resources/css/images/fav-72.png">
-<link rel="apple-touch-icon-precomposed" href="<%=Constants.CONTEXT%>/resources/css/images/fav-57.png">
-<link rel="shortcut icon" href="<%=Constants.CONTEXT%>/resources/css/images/fav.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%=Constants.CONTEXT%>/resources/images/fav-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%=Constants.CONTEXT%>/resources/images/fav-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%=Constants.CONTEXT%>/resources/images/fav-72.png">
+<link rel="apple-touch-icon-precomposed" href="<%=Constants.CONTEXT%>/resources/images/fav-57.png">
+<link rel="shortcut icon" href="<%=Constants.CONTEXT%>/resources/images/fav.png">
+--%>
 
 <div id="content">
-   <body>
+   <%--<body>--%>
    <!-- Header Wrap Starts -->
-   <header class="header-wrap">
-      <!-- Top Bar Starts -->
-      <div class="top-bar">
-         <!-- Nested Container Starts -->
-         <div class="container clearfix text-center-sm text-center-xs">
-            <!-- Social Media Links Starts -->
-            <ul class="list-unstyled list-inline top-sm-links pull-left-lg pull-left-md">
-               <li><a href="#"><i class="fa fa-facebook circle animation"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter circle animation"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus circle animation"></i></a></li>
-               <li><a href="#"><i class="fa fa-instagram circle animation"></i></a></li>
-               <li><a href="#"><i class="fa fa-pinterest-p circle animation"></i></a></li>
-            </ul>
-            <!-- Social Media Links Ends -->
-            <!-- Top Links Starts -->copyright text-center
-            <ul class="list-unstyled list-inline top-links pull-right-lg pull-right-md text-right-lg text-right-md">
-               <li><i class="fa fa-phone"></i> +1 234-567-898</li>
-               <li><i class="fa fa-map-marker"></i> #3 Southern View, Shanti Ville, Hyd</li>
-               <li><i class="fa fa-envelope"></i> <a href="#">info@domainname.com</a></li>
-            </ul>
-            <!-- Top Links Ends -->
-         </div>
-         <!-- Nested Container Ends -->
-      </div>
-      <!-- Top Bar Ends -->
+   <%--<header class="header-wrap">--%>
       <!-- Navbar Starts -->
       <nav id="nav" class="navbar navbar-default flat" role="navigation">
          <!-- Container Starts -->
@@ -83,14 +65,14 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand">
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/logo.png" alt="Coffee Bingo" class="img-responsive">
+               <a href="<%=Constants.CONTEXT%>/main.do" class="navbar-brand">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/logo.png" style="width:250px" alt="Monster Pizza" class="img-responsive">
                </a>
             </div>
             <!-- Navbar Header Ends -->
             <!-- Navbar Collapse Starts -->
             <div class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-right animation">
+               <ul class="nav navbar-nav navbar-right animation" id="menubar">
                   <li class="current"><a href="index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="menu.html">Menu</a></li>
@@ -118,22 +100,26 @@
          <!-- Container Ends -->
       </nav>
       <!-- Navbar Ends -->
+      <!-- Top Bar Starts -->
+      <%----%>
+      <!-- Top Bar Ends -->
+
       <!-- Slider Starts -->
       <div id="main-slider" class="carousel slide carousel-fade" data-ride="carousel">
          <!-- Wrapper For Slides Starts -->
          <div class="carousel-inner text-center">
             <!-- Slide #1 Starts -->
             <div class="item active">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/slider/slider-img1-b.jpg" alt="Slide 1" class="img-responsive">
+               <img src="<%=Constants.CONTEXT%>/resources/images/slider/slider-img1-b.jpg" alt="Slide 1" class="img-responsive">
                <div class="carousel-caption hidden-xs">
                   <!-- Nested Row Starts -->
                   <div class="row">
                      <div class="col-lg-5 col-xs-8 col-lg-offset-7 col-xs-offset-4">
-                        <div class="content-box">
-                           <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/heart.png" alt="Heart">
+                        <%--<div class="content-box">
+                           <img src="<%=Constants.CONTEXT%>/resources/images/icons/heart.png" alt="Heart">
                            <h2>Start The Day With Great Taste</h2>
                            <h4>A Premium Coffee Bootstrap HTML Template. Exclusive In WrapBoostrap</h4>
-                        </div>
+                        </div>--%>
                      </div>
                   </div>
                   <!-- Nested Row Ends -->
@@ -142,16 +128,16 @@
             <!-- Slide #1 Ends -->
             <!-- Slide #2 Starts -->
             <div class="item">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/slider/slider-img2-b.jpg" alt="Slide 2" class="img-responsive">
+               <img src="<%=Constants.CONTEXT%>/resources/images/slider/slider-img2-b.jpg" alt="Slide 2" class="img-responsive">
                <div class="carousel-caption hidden-xs">
                   <!-- Nested Row Starts -->
                   <div class="row">
                      <div class="col-lg-5 col-xs-8 col-lg-offset-7 col-xs-offset-4">
-                        <div class="content-box">
-                           <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/heart.png" alt="Heart">
+                        <%--<div class="content-box">
+                           <img src="<%=Constants.CONTEXT%>/resources/images/icons/heart.png" alt="Heart">
                            <h2>Heading #2</h2>
                            <h4>A Premium Coffee Bootstrap HTML Template. Exclusive In WrapBoostrap</h4>
-                        </div>
+                        </div>--%>
                      </div>
                   </div>
                   <!-- Nested Row Ends -->
@@ -160,16 +146,16 @@
             <!-- Slide #2 Ends -->
             <!-- Slide #3 Starts -->
             <div class="item">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/slider/slider-img3-b.jpg" alt="Slide 3" class="img-responsive">
+               <img src="<%=Constants.CONTEXT%>/resources/images/slider/slider-img3-b.jpg" alt="Slide 3" class="img-responsive">
                <div class="carousel-caption hidden-xs">
                   <!-- Nested Row Starts -->
                   <div class="row">
                      <div class="col-lg-5 col-xs-8 col-lg-offset-7 col-xs-offset-4">
-                        <div class="content-box">
-                           <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/heart.png" alt="Heart">
+                        <%--<div class="content-box">
+                           <img src="<%=Constants.CONTEXT%>/resources/images/icons/heart.png" alt="Heart">
                            <h2>Heading #3</h2>
                            <h4>A Premium Coffee Bootstrap HTML Template. Exclusive In WrapBoostrap</h4>
-                        </div>
+                        </div>--%>
                      </div>
                   </div>
                   <!-- Nested Row Ends -->
@@ -178,7 +164,7 @@
             <!-- Slide #3 Ends -->
          </div>
          <!-- Wrapper For Slides Ends -->
-         <!-- Control Starts -->
+         <%--<!-- Control Starts -->
          <a class="left carousel-control animation hidden-xs" id="prev" href="#main-slider" role="button" data-slide="prev">
             <span class="fa fa-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -187,10 +173,10 @@
             <span class="fa fa-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
          </a>
-         <!-- Control Ends -->
+         <!-- Control Ends -->--%>
       </div>
       <!-- Slider Ends -->
-   </header>
+   <%--</header>--%>
    <!-- Header Wrap Ends -->
    <!-- Intro Section Starts -->
    <section class="section section-home-intro">
@@ -207,7 +193,7 @@
          <div class="row">
             <!-- Welcome Content Starts -->
             <div class="col-sm-6 col-xs-12">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/<%=Constants.CONTEXT%>/resources/css/images/icons/cutlery.jpg" alt="Cutlery" class="img-center">
+               <img src="<%=Constants.CONTEXT%>/resources/images/icons/cutlery.jpg" alt="Cutlery" class="img-center">
                <h2 class="text-normal"><span class="text-light">About</span> Coffee Shop</h2>
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -221,7 +207,7 @@
             <!-- Spacer For Small Screen Ends -->
             <!-- Welcome Image Starts -->
             <div class="col-sm-6 col-xs-12">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image1.jpg" alt="Image" class="img-responsive img-center-xs br-5">
+               <img src="<%=Constants.CONTEXT%>/resources/images/home/image1.jpg" alt="Image" class="img-responsive img-center-xs br-5">
             </div>
             <!-- Welcome Image Ends -->
          </div>
@@ -242,9 +228,9 @@
             <!-- Box #1 Starts -->
             <div class="col-sm-4 col-xs-12">
                <div class="box-1">
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/box-img1.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/box-img1.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
                   <div class="hover-content">
-                     <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/coffee-cup.png" alt="Coffee Cup" class="img-center box-1-icon">
+                     <img src="<%=Constants.CONTEXT%>/resources/images/icons/coffee-cup.png" alt="Coffee Cup" class="img-center box-1-icon">
                      <h3>Hot Beverages</h3>
                      <h6 class="view-more-link"><a href="#">View More</a></h6>
                   </div>
@@ -254,9 +240,9 @@
             <!-- Box #2 Starts -->
             <div class="col-sm-4 col-xs-12">
                <div class="box-1">
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/box-img2.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/box-img2.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
                   <div class="hover-content">
-                     <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/cool-glass.png" alt="Cool Glass" class="img-center box-1-icon">
+                     <img src="<%=Constants.CONTEXT%>/resources/images/icons/cool-glass.png" alt="Cool Glass" class="img-center box-1-icon">
                      <h3>Classic Cool's</h3>
                      <h6 class="view-more-link"><a href="#">View More</a></h6>
                   </div>
@@ -266,9 +252,9 @@
             <!-- Box #3 Starts -->
             <div class="col-sm-4 col-xs-12">
                <div class="box-1">
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/box-img3.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/box-img3.jpg" alt="Image" class="img-responsive img-center box1-img animation-1">
                   <div class="hover-content">
-                     <img src="<%=Constants.CONTEXT%>/resources/css/images/icons/sandwich.png" alt="Cool Glass" class="img-center box-1-icon">
+                     <img src="<%=Constants.CONTEXT%>/resources/images/icons/sandwich.png" alt="Cool Glass" class="img-center box-1-icon">
                      <h3>Sandwiches</h3>
                      <h6 class="view-more-link"><a href="#">View More</a></h6>
                   </div>
@@ -321,7 +307,7 @@
                      <!-- Product Details Ends -->
                      <!-- Product Image Starts -->
                      <div class="col-sm-6 col-xs-12">
-                        <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
+                        <img src="<%=Constants.CONTEXT%>/resources/images/home/image2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
                      </div>
                      <!-- Product Image Ends -->
                   </div>
@@ -359,7 +345,7 @@
                      <!-- Product Details Ends -->
                      <!-- Product Image Starts -->
                      <div class="col-sm-6 col-xs-12">
-                        <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
+                        <img src="<%=Constants.CONTEXT%>/resources/images/home/image3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
                      </div>
                      <!-- Product Image Ends -->
                   </div>
@@ -397,7 +383,7 @@
                      <!-- Product Details Ends -->
                      <!-- Product Image Starts -->
                      <div class="col-sm-6 col-xs-12">
-                        <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
+                        <img src="<%=Constants.CONTEXT%>/resources/images/home/image4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
                      </div>
                      <!-- Product Image Ends -->
                   </div>
@@ -435,7 +421,7 @@
                      <!-- Product Details Ends -->
                      <!-- Product Image Starts -->
                      <div class="col-sm-6 col-xs-12">
-                        <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
+                        <img src="<%=Constants.CONTEXT%>/resources/images/home/image5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs br-5">
                      </div>
                      <!-- Product Image Ends -->
                   </div>
@@ -723,7 +709,7 @@
             <div class="col-sm-4 col-xs-12">
                <article class="blog-post-teaser">
                   <!-- Blog Post Media Starts -->
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image6.jpg" alt="Blog Image" class="img-responsive img-center br-5">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/image6.jpg" alt="Blog Image" class="img-responsive img-center br-5">
                   <!-- Blog Post Media Ends -->
                   <!-- Blog Post Heading Starts -->
                   <h5 class="blog-post-teaser-title"><a href="#">Strawberry Juice Refresher</a></h5>
@@ -762,7 +748,7 @@
                   </div>
                   <!--- Blog Content Ends -->
                   <!-- Blog Post Media Starts -->
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image7.jpg" alt="Blog Image" class="img-responsive img-center br-5">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/image7.jpg" alt="Blog Image" class="img-responsive img-center br-5">
                   <!-- Blog Post Media Ends -->
                </article>
             </div>
@@ -771,7 +757,7 @@
             <div class="col-sm-4 col-xs-12">
                <article class="blog-post-teaser">
                   <!-- Blog Post Media Starts -->
-                  <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image8.jpg" alt="Blog Image" class="img-responsive img-center br-5">
+                  <img src="<%=Constants.CONTEXT%>/resources/images/home/image8.jpg" alt="Blog Image" class="img-responsive img-center br-5">
                   <!-- Blog Post Media Ends -->
                   <!-- Blog Post Heading Starts -->
                   <h5 class="blog-post-teaser-title"><a href="#">Strawberry Juice Refresher</a></h5>
@@ -895,7 +881,7 @@
             <!-- Spacer For Small Screens Ends -->
             <!-- Image Starts -->
             <div class="col-sm-6 col-xs-12">
-               <img src="<%=Constants.CONTEXT%>/resources/css/images/home/image9.jpg" alt="Reservation" class="img-responsive img-center br-5">
+               <img src="<%=Constants.CONTEXT%>/resources/images/home/image9.jpg" alt="Reservation" class="img-responsive img-center br-5">
             </div>
             <!-- Image Ends -->
          </div>
@@ -1054,7 +1040,7 @@
    <script src="<%=Constants.CONTEXT%>/resources/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
    <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
    <script src="<%=Constants.CONTEXT%>/resources/js/custom.js"></script>
-   </body>
+   <%--</body>--%>
 </div>
 
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/monpi.iml" filepath="$PROJECT_DIR$/monpi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openmedia.iml" filepath="$PROJECT_DIR$/openmedia.iml" />
     </modules>
   </component>
 </project>

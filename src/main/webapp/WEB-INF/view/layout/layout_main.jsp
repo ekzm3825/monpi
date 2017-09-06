@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-<%@ page import="com.dk.monpi.constant.Constants"%>
+<%@ page import="com.diquest.openmedia.constant.Constants"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +71,6 @@
 
 <div id="wrapper">
 	<tiles:insertAttribute name="header"/>
-	<hr />
 	<tiles:insertAttribute name="content"/>
 	<hr />
 	<tiles:insertAttribute name="footer"/>

@@ -16,7 +16,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>com.dk.monpi.config.ApplicationConfig</param-value>
+    <param-value>com.diquest.openmedia.config.ApplicationConfig</param-value>
   </context-param>
 
 
@@ -101,7 +101,7 @@
     </init-param>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.dk.monpi.config.WebMvcConfig</param-value>
+      <param-value>com.diquest.openmedia.config.WebMvcConfig</param-value>
     </init-param>
     <init-param>
       <param-name>throwExceptionIfNoHandlerFound</param-name>
